@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "auth-upload",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

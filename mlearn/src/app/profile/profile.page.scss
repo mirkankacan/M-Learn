@@ -1,0 +1,22 @@
+ion-avatar{
+    width:128px;
+    height:128px;
+}
+.preview{
+ position: absolute;
+left: 50%;
+top: 20%;
+transform: translate(-50%, -50%);
+border: 1px solid #ffff0017;
+padding: 10px;
+}
+.fallback{
+    width: 128px;
+    height: 128px;
+    border-radius:50%;
+    background: red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}

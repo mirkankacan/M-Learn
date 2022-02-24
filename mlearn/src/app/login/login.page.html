@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title class="ion-text-center" style="font-family: 'Courier New', monospace;">M-Learn</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+<form [formGroup]="credentials" (ngSubmit)="login()">
+<ion-item>
+<img src="./assets/icon/logo.jpg" alt="Logo">
+</ion-item>
+<br>
+  <ion-item fill="solid" class="ion-margin-bottom">
+    <ion-label position="floating">Email:</ion-label>
+    <ion-input type="email" clearInput formControlName="email"></ion-input>
+    <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid!</ion-note>
+  </ion-item>
+  <ion-item fill="solid" class="ion-margin-bottom">
+    <ion-label position="floating">Password:</ion-label>
+    <ion-input type="password" clearInput formControlName="password"></ion-input>
+    <ion-note slot="error" *ngIf="(password.dirty || password.touched) && email.errors">Password is invalid!</ion-note>
+  </ion-item>
+  <ion-button shape="round" expand="block"  color="success" [disabled]="!credentials.valid" type="submit" >Login</ion-button>
+  <ion-button shape="round" expand="block" color="secondary" type="button" (click)="register()">Register</ion-button>
+
+</form>
+
+
+</ion-content>

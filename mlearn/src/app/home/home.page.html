@@ -1,0 +1,45 @@
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+<ion-content>
+<table style="margin-top:10%;margin-left:10%;margin-right:10%;height:80%">
+  <section >
+    
+ <tr>
+<ion-button color="none" id="gomount" routerLink="/ida">Ida</ion-button>
+<ion-button color="none" id="gomount"  routerLink="/kinabalu">Kinabalu</ion-button>
+<ion-button color="none" id="gomount"  routerLink="/kunlun">Kunlun</ion-button>
+<ion-button color="none" id="gomount" style="font-size:12px" routerLink="/vinson">Vinson Massif</ion-button> 
+<ion-button color="none" id="gomount" routerLink="/toubkal">Toubkal</ion-button>
+<ion-button color="none" id="gomount"  routerLink="/fuji">Fuji</ion-button>
+<ion-button color="none" id="gomount" style="font-size:12px" routerLink="/citlaltepetl">Citlaltépetl</ion-button>
+<ion-button color="none" id="gomount"routerLink="/bigben">Big Ben</ion-button>
+</tr>
+
+  </section>
+</table>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-button style="width:33%" color="success" [routerLink]="['/profile']" >
+          <ion-icon name="man-outline"></ion-icon>
+          Profile
+        </ion-button>
+       
+        <ion-button  style="width:33%" color="danger" (click)="logout()">
+          <ion-icon name="log-out-outline"></ion-icon>
+          Logout
+        </ion-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

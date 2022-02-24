@@ -1,0 +1,7 @@
+{
+  "name": "auth-upload",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
