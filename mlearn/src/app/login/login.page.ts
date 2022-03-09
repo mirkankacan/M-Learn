@@ -10,8 +10,8 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-credentials:FormGroup;
 
+credentials:FormGroup;
 
 constructor(
     private fb:FormBuilder,
@@ -34,27 +34,13 @@ constructor(
       password:['',[Validators.required,Validators.minLength(6)]]
     })
   }
-    async register(){
-      const loading=await this.loadingController.create();
-      await loading.present();
-
-      const user=await this.authService.register(this.credentials.value);
-      await loading.dismiss();
-
-      if(user){
-        this.router.navigateByUrl('/home',{replaceUrl:true});
-      }
-      else{
-        this.showAlert('Registration failed!','Please try again.');
-      }
-    }
+    
     async login(){
         const loading=await this.loadingController.create();
       await loading.present();
 
       const user=await this.authService.login(this.credentials.value);
       await loading.dismiss();
-
       if(user){
        
          this.router.navigateByUrl('/profile',{replaceUrl:true});
@@ -63,6 +49,7 @@ constructor(
         this.showAlert('Login failed!','Please try again.');
       }
     }
+    
     async showAlert(header,message){
       const alert=await this.alertController.create({
         header,
@@ -71,6 +58,13 @@ constructor(
       });
       await alert.present();
     }
+
+    goRegister(){
+      this.router.navigateByUrl('/register',{replaceUrl:true});
+    }
+  
+
   }
+
 
 

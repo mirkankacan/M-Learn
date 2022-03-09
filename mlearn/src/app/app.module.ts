@@ -14,11 +14,11 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { Capacitor } from '@capacitor/core';
 import {initializeAuth, indexedDBLocalPersistence} from 'firebase/auth';
-
+import { HttpClient,HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(),
+  imports: [BrowserModule, IonicModule.forRoot(),HttpClientModule,
     provideFirebaseApp(()=>initializeApp(environment.firebase)),
      AppRoutingModule, 
      provideAuth(() => {

@@ -21,7 +21,7 @@
     <ion-note slot="error" *ngIf="(password.dirty || password.touched) && email.errors">Password is invalid!</ion-note>
   </ion-item>
   <ion-button shape="round" expand="block"  color="success" [disabled]="!credentials.valid" type="submit" >Login</ion-button>
-  <ion-button shape="round" expand="block" color="secondary" type="button" (click)="register()">Register</ion-button>
+  <ion-button shape="round" expand="block"  color="secondary" (click)="goRegister()" >Register Now</ion-button>
 
 </form>
 
